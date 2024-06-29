@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Vazirmatn:wght@100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+*::selection{
+    color: #43ffaf;
+}
+body{
+    background-color: #262a33;
+}
+body nav{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    font-family: "Vazirmatn", sans-serif;
+    gap: 5px;
+}
+body nav h1{
+    color: white;
+    font-size: 2.5rem;
+    font-weight:400;
+}
+body nav ion-icon{
+    color: #43ffaf;
+    font-size: 2.3rem;
+}
+.result{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    gap: 20px;
+    padding: 10px;
+    font-size: 30px;
+    width: 50%;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+.result p{
+    font-family: "Roboto Mono", monospace;  
+    color: #526777;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+.result p:hover{
+    color: white;
+}
+.text{
+    color: #526777;
+    font-size: 2rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 4rem;
+    font-family: "Roboto Mono", monospace;  
+}
+.refresh{
+    transition: all 0.2s ease-in-out;
+    color: #526777 ;
+    font-size: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 3rem auto;
+    cursor: pointer;
+}
+.refresh:hover{
+    color: white;
+}
+
+.correct{
+    color: #43ffaf;
+}
+.wrong{
+    color: red;
+    border-bottom: 2px solid red;
+}
+.active{
+    padding-left: 2px;
+    border-left: 3px solid #43ffaf;
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    0% {
+        border-color: #43ffaf; 
+      }
+      50% {
+        border-color: transparent;
+      }
+      100% {
+        border-color: #43ffaf; 
+      }
+}
+input{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1px;
+    opacity: 0;  
+}
